@@ -27,4 +27,4 @@ dist-ssr
 release
 
 # env
-.env
+.env    
