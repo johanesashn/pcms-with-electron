@@ -16,11 +16,11 @@ export const useLoginForm = () => {
 
     const { reset } = form
 
-    const onSubmit = (data: User) => {
+    const onSubmit = (path: string) => (data: User) => {
         console.log('Form submitted:', data);
         // Handle login logic here, e.g., API call
         reset();
-        navigate('/home');
+        navigate(path);
     };
 
     return {
