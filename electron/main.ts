@@ -32,6 +32,10 @@ function createWindow() {
     },
   })
 
+  win.setMenuBarVisibility(false);
+  win.setAutoHideMenuBar(true); // Optional: allow Alt key to show it
+  win.webContents.openDevTools() // Open the DevTools for debugging
+
   // Test active push message to Renderer-process.
   win.webContents.on('did-finish-load', () => {
     win?.webContents.send('main-process-message', (new Date).toLocaleString())

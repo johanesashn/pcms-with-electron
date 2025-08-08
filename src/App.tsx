@@ -1,11 +1,17 @@
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Login from "./pages/Login"
+
 function App() {
 
   return (
-    <>
-      <div className='font-bold'>
-        <h1 className="text-4xl">PCMS</h1>
-      </div>
-    </>
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+
+      {/* default is login */}
+      <Route path="/" element={<Login />} />
+    </Routes>
   )
 }
 
