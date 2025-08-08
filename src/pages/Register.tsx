@@ -7,8 +7,8 @@ const Login = () => {
   return (
     <div className='flex flex-col items-center justify-center h-screen gap-12 w-full'>
       <h1 className='text-6xl font-bold'>PCMS</h1>
-      <form className='flex flex-col items-center border rounded py-12 w-1/2' onSubmit={handleSubmit(onSubmit("/home"))}>
-        <h2 className='text-3xl font-bold mb-8'>Login</h2>
+      <form className='flex flex-col items-center border rounded py-12 w-1/2' onSubmit={handleSubmit(onSubmit("/login"))}>
+        <h2 className='text-3xl font-bold mb-8'>Register</h2>
         <div className="flex flex-col gap-2 mb-8 w-2/3">
           <label htmlFor="username">Username</label>
           <input 
@@ -29,9 +29,9 @@ const Login = () => {
             placeholder='Enter your username'
           />
         </div>
-        <button className='border p-4 py-2 rounded' type='submit'>Login</button>
+        <button className='border p-4 py-2 rounded' type='submit'>Register</button>
         <p className='text-sm mt-4'>
-          Don't have an account? <Link to="/register" className='text-blue-500'>Register</Link>
+          Don't have an account? <Link to="/login" className='text-blue-500'>Login</Link>
         </p>
       </form>
     </div>
